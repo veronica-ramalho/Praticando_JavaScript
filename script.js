@@ -107,11 +107,90 @@
 // FIND
 // Retorna o primeiro elemento que atende a condição
 
-let produtos = [
-    {id: 1, nome: "Teclado", preco: 50}, // cada linha, um produto
-    {id: 2, nome: "Mouse", preco: 30}
-];
+// let produtos = [
+//     {id: 1, nome: "Teclado", preco: 50}, // cada linha, um produto
+//     {id: 2, nome: "Mouse", preco: 30},
+//     {id: 2, nome: "Caderno", preco: 30}
+// ];
 
-let item = produtos.find(produto => produto.id === 2);
+// let item = produtos.find(produto => produto.id === 2);
 
-console.log(item);
+// console.log(item);
+
+// // diferença entre find e find
+// // FIND -> retorna somente o primeiro elemento que ele encontra com a condição
+// // FILTER -> retona todos os elementos que encontra com a condição
+// // arrow function / função lambda
+// let itemFiltrado = produtos.filter(produto => produto.id === 2); // forma resumida
+
+// console.log(itemFiltrado);
+
+// produtos.filter(function(produto) { // forma completa
+//     produto.id == 2;
+// })
+
+// SPLIT
+// Divide a string em partes, transformando em um array
+
+// let frase = "JS é top";
+// let palavras = frase.split(" ");
+
+// console.log(palavras);
+
+// TRIM
+// Remove spaços no inicio e final de string
+// let nome = "      Paulo";
+// let nomeLimpo = nome.trim();
+
+// console.log(nome);
+// console.log(nomeLimpo);
+
+// INCLUDES
+// Verifica se existe um valor dentro de uma lista e retorna um bool
+
+// let frutas = ["maçã", "banana"];
+// let frutasIncludes = frutas.includes("maçã");
+
+// console.log(frutasIncludes);
+
+// toLowerCase() -> transforma o texto em minusculo
+// toUpperCase() -> transforma o texto em maiusculo
+// let nome = "KESSIA";
+// let cargo = "instrutor";
+
+// console.log(nome.toLowerCase());
+// console.log(cargo.toUpperCase());
+
+// FOREACH
+// let nomes = ["Guilherme", "João", "Maria"];
+
+// nomes.forEach(nome => console.log(nome));
+
+// SOME
+// Verifica se pelo menos um iem atendde a condição
+// retorna bool
+
+// let numeros = [1, 3, 5, 8];
+// let temPar = numeros.some(num => num % 2 === 0);
+// console.log(temPar);
+
+// // EVERY
+// // Verifica se todos os elementos atendem a condição
+
+// let todosPares = numeros.every(num => num % 2 === 0);
+// console.log(todosPares);
+
+// SORT
+// Ordena os elementos do array
+
+let numeros = [3, 10, 5, 2, 4];
+let letras = ["c", "a", "x", "h"];
+
+// para letras
+
+letras.sort
+console.log(letras);
+
+// para números
+numeros.sort((a, b) => a - b);
+console.log(numeros);

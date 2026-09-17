@@ -183,14 +183,151 @@
 // SORT
 // Ordena os elementos do array
 
-let numeros = [3, 10, 5, 2, 4];
-let letras = ["c", "a", "x", "h"];
+// let numeros = [3, 10, 5, 2, 4];
+// let letras = ["c", "a", "x", "h"];
 
-// para letras
+// // para letras
 
-letras.sort
-console.log(letras);
+// letras.sort
+// console.log(letras);
 
-// para números
-numeros.sort((a, b) => a - b);
-console.log(numeros);
+// // para números
+// numeros.sort((a, b) => a - b);
+// console.log(numeros);
+ 
+// REVERSE
+// Inverte a ordem dos elementos no array
+// let numeros = [1, 2, 3];
+
+// numeros.reverse();
+// console.log(numeros);
+
+// JOIN
+// Junta os elementos de um array em uma string
+// let palavras = ["JS", "é", "top"];
+// let frase = palavras.join(" ");
+
+// console.log(palavras); 
+
+//ADICIONANDO E REMOVENDO ELEMENTOS DO ARRAY
+// PUSH
+// POP
+// SHIFT
+// UNSHIFT
+// let lista = ["A", "B"];
+
+// //PUSH -> adiciona elementos no final do array
+// lista.push("C"); //adicionando
+
+// // POP -> remove o elemento no final da lista
+// lista.pop();
+
+// // SHIFT -> remove elemetos no começo da lista
+// lista.shift(); //remove
+
+// // UNSHIFT -> adicionar elementos no inicio da lista
+// lista.unshift("A"); //adicionando
+
+// console.log(lista);
+
+
+// SLICE
+// Cria uma copia de uma parte da lista
+
+/*
+    array.slice(inicial, final)
+
+    inicial -> onde começa
+    final -> onde termina (não inclui a poisção/indice/index)
+*/
+// let numeros = [1, 2, 3, 4];
+// let parte = numeros.slice(1, 3); //posições do array
+
+// console.log(parte);
+
+
+// SPLICE
+// remove ou adiciona elementos em qualquer posição
+// let numeros = [1, 2, 3, 4];
+
+/*
+    array.splice(index, count, item1, ..., itemX);
+
+    index -> indice(posição do elemento array)
+    count -> número de elementos a serem removidos (pode ser 0)
+    item1, ..., itemX -> itens a serem adicionados
+*/
+
+// // removendo elementos, sem adicionar
+// numeros.splice(1, 1); //1 parametro -> a parir da posição no array ------ 2 parametro -> número de elementos a serem excluidos
+
+// console.log(numeros);
+
+// //removendo elementos e adcionando mais dois elementos
+// let frutas = ["Banana", "Laranja", "Maçã", "Manga"];
+
+// // frutas.splice(0, 3, "Limão", "Kiwi");
+
+// // adicionando elementos sem remover
+// frutas.splice(2, 0, "limão", "Kiwi");
+// console.log(frutas);
+
+
+// REPLACE
+// Substitui uma parte da string
+
+/*
+    replace("valorProcurado", "valorQueSubstitui")
+*/
+// let texto = "Olá, mundo!";
+// let novoTexto = texto.replace("mundo", "cliente");
+
+// console.log(novoTexto);
+
+
+// NOSSAS FUNÇÕES
+// função comum
+// function exibirMensagem()
+// {
+//     console.log("Bem vinda(o)!");
+// }
+
+// exibirMensagem();
+
+// função com parametros
+// function cumprimentar(nome)
+// {
+//     console.log(`Olá, ${nome}`);
+// }
+// cumprimentar("Anna");
+// cumprimentar("Carlos");
+
+// função com mais de um parametro
+// function somar(n1, n2)
+// {
+//     let soma = n1 + n2;
+//     console.log(soma);
+// }
+
+// somar(7, 3);
+
+// const somar = (n1, n2) => n1 + n2;
+// console.log(somar(1, 2));
+
+// PROMPT
+// recebe/solicita uma informção do usuário
+// o valor recebido pelo prompt() normalmente é string
+// let nome = prompt("Digite seu nome");
+// console.log(nome);
+
+// // recebendo um número e convertendo
+// // Number() -> converte de forma genérica (inteiro ou quebrado)
+// let idade = Number(prompt("Digite sua idade"));
+
+// // ParseInt() -> converte o valor para um número inteiro 
+// idade = parseInt(prompt("Digite sua idade"));
+
+// // ParseFloat() -> converte o valor para número decimal/ponto flutuante
+// idade = parseFloat(prompt("Digite sua idade"));
+
+

@@ -1,29 +1,31 @@
-const elementos = document.querySelectorAll(".texto");
+// const elementos = document.querySelectorAll(".texto");
 
-// percorrendo a lista e imprimindo cada um dos elementos
-elementos.forEach(elemento => console.log(elemento));
+// // percorrendo a lista e imprimindo cada um dos elementos
+// elementos.forEach(elemento => console.log(elemento));
 
-// percorrendo a lista e pegando o texto do elemento (innerText)
-elementos.forEach(elemento => console.log(elemento.innerText));
+// // percorrendo a lista e pegando o texto do elemento (innerText)
+// elementos.forEach(elemento => console.log(elemento.innerText));
 
-// alterando texto
-elementos.forEach(elemento => {
-    elemento.innerText = "Alterado";
- // elemento.textContent = "Alterado"; //vem com formatação
-})
+// // alterando texto
+// elementos.forEach(elemento => {
+//     elemento.innerText = "Alterado";
+//  // elemento.textContent = "Alterado"; //vem com formatação
+// })
 
-// trocando as tags - innerHTML
-elementos.forEach(elemento => {
-    elemento.innerHTML = "<h2>item</h2>"
-})
+// // trocando as tags - innerHTML
+// elementos.forEach(elemento => {
+//     elemento.innerHTML = "<h2>item</h2>"
+// })
 
-// trocar a cor do elementos
-elementos.forEach(elemento => {
-    elemento.style.color = "#0000FF"
-})
+// // trocar a cor do elementos
+// elementos.forEach(elemento => {
+//     elemento.style.color = "#0000FF"
+// })
+
+
 
 // EVENTOS COM JS
-// o qu são eventos? São ações do usuario
+// o que são eventos? São ações do usuario
 
 // evento click
 // const botao = document.getElementById("btn");
@@ -31,6 +33,9 @@ elementos.forEach(elemento => {
 // botao.addEventListener("click", () => {
 //     alert("Você clicou");
 // })
+
+
+
 
 // // evento de digitação (input / keyup)
 // const campo = document.getElementById("campo");
@@ -43,12 +48,15 @@ elementos.forEach(elemento => {
 //     resultado.innerText = campo.value;
 // })
 
+
 // KEYUP 
 // só dispara quando solta a tecla
 // campo.addEventListener("keyup", () =>{
 //     // value -> o que está sendo digitado dentro do campo
 //     resultado.innerText = campo.value;
 // })
+
+
 
 // // EVENTO DE MOUSE
 // const elemento = document.getElementById("troca-cor");
@@ -57,6 +65,7 @@ elementos.forEach(elemento => {
 // elemento.addEventListener("mouseover", () => {
 //     elemento.style.backgroundColor = "#ffd8ebff";
 // })
+
 
 // // mouseout -> quando o mouse sai do elemento
 // elemento.addEventListener("mouseout", () => {
@@ -70,16 +79,57 @@ elementos.forEach(elemento => {
 //     console.log(`Posição X: ${evento.clientX}, Posição Y: ${evento.clientY}`);
 // })
 
+
+
 //EVENTO DE FORMULÁRIO (submit)
-const form = document.querySelector("form"); //pegando direto pela tag form
+// const form = document.querySelector("form"); //pegando direto pela tag form
 
-//o corpotamento padrão da página é recarregar a página ao enviar o submit
-form.addEventListener("submit", (e) =>{
+// //o corpotamento padrão da página é recarregar a página ao enviar o submit
+// form.addEventListener("submit", (e) =>{
 
-    // impede o comportamento padrão do formulário
-    e.preventDefault();
+//     // impede o comportamento padrão do formulário
+//     e.preventDefault();
 
-    const nome = document.getElementById("nome").value;
+//     const nome = document.getElementById("nome").value;
 
-    console.log(`Nome: ${nome}`);
+//     console.log(`Nome: ${nome}`);
+// })
+
+
+// Criando elementos na página
+// const novoElemento = document.createElement("p"); //cria o elemento <p>
+// novoElemento.innerText = "Elemento novo criado."; //ciando um texto no elemento
+// const form = document.getElementById("form");
+// form.appendChild(novoElemento); //adicionando um elemento filho (p) dentro do pai (form)
+
+// // criar  um botão
+// const botao = document.createElement("button");
+// botao.innerText = "Excluir elemento";
+
+// form.appendChild(botao);
+// botao.addEventListener("click", (e) => {
+//     e.preventDefault();
+
+//     novoElemento.remove;
+
+//     //apagando dirreto do pai
+//     form.removeChild(novoElemento);
+// })
+
+
+
+// Adicionando elementos em um lista a partir de um input
+const input = document.getElementById("input"); //input
+const botao = document.getElementById("add"); //button
+const lista = document.getElementById("lista"); //ul
+
+botao.addEventListener("click", () => {
+    const valorDigitado = input.value // pga o valor que foi digitado na caixinha
+    const li = document.createElement("li"); //criando <li>
+    
+    li.innerText = valorDigitado;
+
+    lista.appendChild(li); //colocndo o filho (li) dentro do pai (ul)
+
+    input.value = "";
 })
